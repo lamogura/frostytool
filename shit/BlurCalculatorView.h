@@ -10,4 +10,5 @@
 
 @interface BlurCalculatorView : UIInputView
 @property (nonatomic, assign) CGFloat fillAlpha;
+@property (nonatomic, assign) BOOL isBlack;
 @end

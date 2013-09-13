@@ -54,7 +54,8 @@
     }
     
     CGContextRef gc = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(gc, [UIColor colorWithWhite:0.0 alpha:_fillAlpha].CGColor);
+    CGFloat white = _isBlack ? 0.0 : 1.0;
+    CGContextSetFillColorWithColor(gc, [UIColor colorWithWhite:white alpha:_fillAlpha].CGColor);
     CGContextAddPath(gc, path.CGPath);
     CGContextEOFillPath(gc);
     UIGraphicsEndImageContext();

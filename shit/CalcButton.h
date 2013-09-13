@@ -16,5 +16,6 @@
 @property (nonatomic, assign) CGFloat selectedFillAlpha;
 @property (nonatomic, assign) CGFloat labelTextAlpha;
 @property (nonatomic, strong) NSNumber *cornerRadius;
+@property (nonatomic, assign) BOOL isBlack;
 
 @end

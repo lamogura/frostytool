@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63B361BD17E2F88800D4511A /* BlackWhiteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B361BC17E2F88700D4511A /* BlackWhiteVC.m */; };
 		CE8C41A017E20B070091CB99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8C419F17E20B070091CB99 /* Foundation.framework */; };
 		CE8C41A217E20B070091CB99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8C41A117E20B070091CB99 /* CoreGraphics.framework */; };
 		CE8C41A417E20B070091CB99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8C41A317E20B070091CB99 /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63B361BB17E2F88700D4511A /* BlackWhiteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackWhiteVC.h; sourceTree = "<group>"; };
+		63B361BC17E2F88700D4511A /* BlackWhiteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackWhiteVC.m; sourceTree = "<group>"; };
 		CE8C419C17E20B070091CB99 /* shit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8C419F17E20B070091CB99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE8C41A117E20B070091CB99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +140,8 @@
 				CE8C41B517E20B070091CB99 /* ViewController.m */,
 				CE8C41B717E20B070091CB99 /* Images.xcassets */,
 				CE8C41A617E20B070091CB99 /* Supporting Files */,
+				63B361BB17E2F88700D4511A /* BlackWhiteVC.h */,
+				63B361BC17E2F88700D4511A /* BlackWhiteVC.m */,
 			);
 			path = shit;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8C41D817E20B880091CB99 /* UIImage+ImageEffects.m in Sources */,
+				63B361BD17E2F88800D4511A /* BlackWhiteVC.m in Sources */,
 				CE8C41B617E20B070091CB99 /* ViewController.m in Sources */,
 				CE8C41DE17E210EE0091CB99 /* CalcButton.m in Sources */,
 				CE8C41B017E20B070091CB99 /* AppDelegate.m in Sources */,

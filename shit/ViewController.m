@@ -19,6 +19,8 @@
 {
     [super viewDidLoad];
     _image = [UIImage imageNamed:@"default"];
+    self.calcView.isBlack = self.isBlackOnWhite;
+    self.calcButton.isBlack = self.isBlackOnWhite;
     
     [self updateImage:nil];
     [self updateOverlay:nil];
@@ -46,10 +48,13 @@
 
 - (IBAction)updateImage:(id)sender
 {
-    self.imageView.image = [_image applyEffectWithWhite:self.whiteSlider.value
+    
+    CGFloat white = _isBlackOnWhite ? self.whiteSlider.value : 1.0 - self.whiteSlider.value;
+    self.imageView.image = [_image applyEffectWithWhite:white
                                                   alpha:self.alphaSlider.value
                                              blurRadius:self.blurSlider.value
                                         saturationDelta:self.saturationSlider.value];
+
 }
 - (IBAction)updateOverlay:(id)sender
 {

@@ -78,19 +78,19 @@
 {
     [super setSelected:selected];
     if (self.isSelected)
-        self.calculatorMinion.textColor = [UIColor colorWithWhite:0.0 alpha:0.7];
+        self.calculatorMinion.textColor = [UIColor colorWithWhite:_isBlack ? 0 : 1.0 alpha:0.7];
     else
-        self.calculatorMinion.textColor = [UIColor colorWithWhite:1.0 alpha:0.7];
+        self.calculatorMinion.textColor = [UIColor colorWithWhite:_isBlack ? 1.0 : 0 alpha:0.7];
 }
 
 -(UIImage *)highlightedStateImage
 {
-    return [self buttonImageWithColor:[UIColor colorWithWhite:1.0 alpha:self.selectedFillAlpha] outlineWidth:0.0];
+    return [self buttonImageWithColor:[UIColor colorWithWhite:_isBlack ? 1.0 : 0 alpha:self.selectedFillAlpha] outlineWidth:0.0];
 }
 
 -(UIImage *)normalStateImage
 {
-    return [self buttonImageWithColor:[UIColor colorWithWhite:0 alpha:self.fillAlpha] outlineWidth:1.6];
+    return [self buttonImageWithColor:[UIColor colorWithWhite:_isBlack ? 0.0 : 1.0 alpha:self.fillAlpha] outlineWidth:1.6];
 }
 
 -(UIImage *)buttonImageWithColor:(UIColor *)color outlineWidth:(CGFloat)outlineWidth
@@ -117,7 +117,7 @@
         CGContextAddPath(gc, inPath.CGPath);
         CGContextAddPath(gc, outPath.CGPath);
 #warning play with this color for border in unselected state
-        CGContextSetFillColorWithColor(gc, [UIColor colorWithWhite:1.0
+        CGContextSetFillColorWithColor(gc, [UIColor colorWithWhite:_isBlack ? 1.0 : 0.0
                                                              alpha:self.selectedFillAlpha].CGColor);
         
        CGContextEOFillPath(gc); // fill area outter - inner
@@ -163,16 +163,16 @@
     [self setImage:[self highlightedStateImage] forState:UIControlStateHighlighted];
     [self setImage:[self highlightedStateImage] forState:UIControlStateSelected];
     
-    self.calculatorMinion.textColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+    self.calculatorMinion.textColor = [UIColor colorWithWhite:_isBlack ? 1.0 : 0 alpha:0.5];
 }
 
 -(void)refreshButtonImages
 {
-    [self setImage:[self buttonImageWithColor:[UIColor colorWithWhite:0 alpha:self.fillAlpha] outlineWidth:1.6] forState:UIControlStateNormal];
+    [self setImage:[self buttonImageWithColor:[UIColor colorWithWhite:_isBlack ? 0.0 : 1.0 alpha:self.fillAlpha] outlineWidth:1.6] forState:UIControlStateNormal];
     
-    [self setImage:[self buttonImageWithColor:[UIColor colorWithWhite:1 alpha:self.selectedFillAlpha] outlineWidth:0] forState:UIControlStateHighlighted];
+    [self setImage:[self buttonImageWithColor:[UIColor colorWithWhite:_isBlack ? 1.0 : 0 alpha:self.selectedFillAlpha] outlineWidth:0] forState:UIControlStateHighlighted];
     
-    [self setImage:[self buttonImageWithColor:[UIColor colorWithWhite:1 alpha:self.selectedFillAlpha] outlineWidth:0] forState:UIControlStateSelected];
+    [self setImage:[self buttonImageWithColor:[UIColor colorWithWhite:_isBlack ? 1.0 : 0 alpha:self.selectedFillAlpha] outlineWidth:0] forState:UIControlStateSelected];
 }
 
 -(void)setCornerRadius:(NSNumber *)cornerRadius
@@ -194,7 +194,7 @@
 }
 
 -(void)setLabelTextAlpha:(CGFloat)labelTextAlpha {
-    self.calculatorMinion.textColor = [UIColor colorWithWhite:1.0 alpha:labelTextAlpha];
+    self.calculatorMinion.textColor = [UIColor colorWithWhite:_isBlack ? 1.0 : 0 alpha:labelTextAlpha];
 }
 
 #pragma mark - KVO

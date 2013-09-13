@@ -24,4 +24,6 @@
 @property (weak, nonatomic) IBOutlet CalcButton *calcButton;
 @property (weak, nonatomic) IBOutlet BlurCalculatorView *calcView;
 
+@property (assign, nonatomic) BOOL isBlackOnWhite;
+
 @end
